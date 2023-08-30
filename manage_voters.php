@@ -5,16 +5,13 @@ if (!isset($_SESSION["user_id"]) || !$_SESSION["is_admin"]) {
     exit();
 }
 
-require 'db.php'; // Make sure to include your database connection
+require 'db.php'; 
 
 // Handle adding voter
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_voter"])) {
     $name = $_POST["name"];
     $email = $_POST["email"];
     $password = $_POST["password"];
-
-    // You should perform validation and security checks here
-
 
     $insertQuery = "INSERT INTO voters (name, email, password) VALUES ('$name', '$email', '$password')";
     if ($conn->query($insertQuery) === TRUE) {
@@ -27,8 +24,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["add_voter"])) {
 // Handle deleting voter
 if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_voter"])) {
     $voterID = $_POST["voter_id"];
-
-    // You should perform validation and security checks here
 
     $deleteQuery = "DELETE FROM voters WHERE id = '$voterID'";
     if ($conn->query($deleteQuery) === TRUE) {

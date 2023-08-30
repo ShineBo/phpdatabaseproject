@@ -7,8 +7,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["user_id"])) {
     $voterID = $_SESSION["user_id"];
     $representativeID = $_POST["representative"];
 
-    // You should perform validation and security checks here
-
     $insertQuery = "INSERT INTO votes (voter_id, representative_id) VALUES ('$voterID', '$representativeID')";
     if ($conn->query($insertQuery) === TRUE) {
         echo "Vote submitted successfully!";
@@ -16,8 +14,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["user_id"])) {
         echo "Error: " . $insertQuery . "<br>" . $conn->error;
     }
 } else {
-    header("Location: login.php"); // Redirect to the login page if not logged in
-}
+    header("Location: login.php");
 ?>
 <!DOCTYPE html>
 <html>

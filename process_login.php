@@ -5,7 +5,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST["email"];
     $password = $_POST["password"];
 
-    // You should perform validation and security checks here
 
     $query = "SELECT id FROM voters WHERE email = '$email' AND password = '$password'";
     $adminQuery = "SELECT id FROM admins WHERE email = '$email' AND password = '$password'";
@@ -28,7 +27,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         $user = $adminResult->fetch_assoc();
         $_SESSION["user_id"] = $user["id"];
         $_SESSION["is_admin"] = true;
-        header("Location: admin_dashboard.php"); // Redirect to the main page
+        header("Location: admin_dashboard.php"); // Redirect to the admin main page
     } 
     else {
         // Authentication failed

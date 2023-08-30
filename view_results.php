@@ -5,9 +5,8 @@ if (!isset($_SESSION["user_id"]) || !$_SESSION["is_admin"]) {
     exit();
 }
 
-require 'db.php'; // Make sure to include your database connection
+require 'db.php';
 
-// Fetch and display voting results
 $query = "SELECT r.id, r.name, COUNT(v.id) AS vote_count FROM representatives r
           LEFT JOIN votes v ON r.id = v.representative_id
           GROUP BY r.id, r.name";
