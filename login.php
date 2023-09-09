@@ -4,9 +4,10 @@
     <title>Login - Representative Voting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
-        <h2>Login</h2>
+        <h2 class="mb-3">Login</h2>
+        <img src="./image/mit.jpeg" alt="" class="mb-3">
         <form action="process_login.php" method="post">
             <div class="form-group">
                 <label for="email">Email:</label>

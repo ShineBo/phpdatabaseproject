@@ -23,7 +23,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_SESSION["user_id"])) {
     <title>Submit Vote - Representative Voting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
         <?php
         session_start();

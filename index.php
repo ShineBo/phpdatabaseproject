@@ -4,7 +4,7 @@
     <title>Representative Voting</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
         <h2>Vote for Your Representative</h2>
         <?php

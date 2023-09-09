@@ -39,7 +39,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_voter"])) {
     <title>Manage Voters</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
         <h2>Manage Voters</h2>
         
@@ -48,7 +48,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST" && isset($_POST["delete_voter"])) {
             <input type="text" name="name" placeholder="Name" required>
             <input type="email" name="email" placeholder="Email" required>
             <input type="password" name="password" placeholder="Password" required>
-            <button type="submit" name="add_voter" class="btn btn-primary">Add Voter</button>
+            <button type="submit" name="add_voter" class="btn btn-success">Add Voter</button>
         </form>
         
         <!-- Delete Voter Form -->

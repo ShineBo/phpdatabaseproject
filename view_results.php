@@ -19,10 +19,10 @@ $result = $conn->query($query);
     <title>View Voting Results</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
-<body>
+<body class="bg-info">
     <div class="container mt-5">
         <h2>View Voting Results</h2>
-        <table class="table">
+        <table class="table table-primary table-striped">
             <thead>
                 <tr>
                     <th>Representative ID</th>
@@ -45,10 +45,10 @@ $result = $conn->query($query);
                 }
                 ?>
             </tbody>
-            <form action="admin_dashboard.php" method="post">
-                <button type="submit" class="btn btn-secondary">Dashboard</button>
-            </form>
         </table>
+        <form action="admin_dashboard.php" method="post">
+                <button type="submit" class="btn btn-secondary">Dashboard</button>
+        </form>
     </div>
 </body>
 </html>
